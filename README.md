@@ -1,4 +1,7 @@
-bisaya 
+# bisaya 
+This repository is something something, binta na
+
+Sorsogon Krazy Cat respetado ng lahat legit na dancer at seller ng coconut
 
 no to bisakol !!
 
