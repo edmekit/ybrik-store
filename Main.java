@@ -5,6 +5,13 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        mainMenu(scanner);
+
+        scanner.close();
+    }
+
+    public static void mainMenu(Scanner scanner) {
         while (true) {
             printDivider('=', 55);
             System.out.println("        STORE INVENTORY MANAGER");
@@ -25,7 +32,7 @@ public class Main {
                 case "3" -> deleteItem(scanner);
                 case "4" -> listItems(); */
                 case 5 -> { return; }  // exit the loop
-                default  -> System.out.println("\nInvalid option. Please enter 1-7.\n");
+                default  -> System.out.println("\nInvalid option. Please enter 1-5.\n");
             }
        }
     }
