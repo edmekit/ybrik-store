@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
 public class Products {
+    // attributes, set to private so only this class can change them
     private String name;
     private double price;
     private int quantity;
 
     public Products(String name, double price, int quantity) {
+        // **this** keyword refers to the object where u are using the method
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
+    // self explanatory stuff
     public String getName() {
         return this.name;
     }

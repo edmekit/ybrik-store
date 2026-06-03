@@ -4,8 +4,8 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        List<Products> inventory = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);       // scanner object
+        List<Products> inventory = new ArrayList<>();   // list of Products objects
 
         mainMenu(scanner, inventory);
 
@@ -44,8 +44,9 @@ public class Main {
     }
 
     private static Products getProduct(List<Products> products, String name) {
-        for (int i = 0; i < products.size(); i++) {
-            if (products.get(i).getName().equals(name)) { // what is this long ass call 
+        for (int i = 0; i < products.size(); i++) {       // loop each product in the list  
+            if (products.get(i).getName().equals(name)) { // get(i) returns a product so I can use Products methods
+                                                          // getName() method for a Products object, equals() method to compare strings 
                 return products.get(i);                   // returns a product
             }
         }
@@ -53,15 +54,16 @@ public class Main {
     }
 
     private static void addItem(Scanner scanner, List<Products> inventory) {
-
+        // get inputs and store to variables
         System.out.print("\n  Enter the name of the item: ");
         String name = scanner.nextLine();
         System.out.print("  Enter the price of the item: ");
         double price = Double.parseDouble(scanner.nextLine());
         System.out.print("  Enter the quantity of the item: ");
         int quantity = Integer.parseInt(scanner.nextLine());
-        Products product = new Products(name, price, quantity);
-        inventory.add(product);
+
+        Products product = new Products(name, price, quantity); // make new Products object
+        inventory.add(product);                                 // add to the list
 
         System.out.println("\nItem added successfully!\n");
     }
@@ -70,7 +72,7 @@ public class Main {
         System.out.print("\nEnter name of product to edit: ");
         String name = scanner.nextLine();
 
-        Products product = getProduct(inventory, name);
+        Products product = getProduct(inventory, name);             // get the product with the name entered
 
         if (product != null) {
             product.editItem(scanner);
