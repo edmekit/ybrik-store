@@ -1,18 +1,13 @@
 import javax.swing.JFrame;
 
-public class GUI { 
+public class GUI() {
 
+    public GUI() {
+        JFrame frame = new JFrame();
 
-	public GUI() {
+    }
 
-
-
-	}
-
-	public static void main(String[] args) {
-
-		new GUI();
-		
-	}
-
+    public static void main(String[] args){
+        new GUI();
+    }
 }
