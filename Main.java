@@ -46,11 +46,11 @@ public class Main {
         System.out.println("  " + String.valueOf(ch).repeat(length));
     }
 
-    private static Products getProduct(List<Products> products, String name) {
-        for (int i = 0; i < products.size(); i++) {       // loop each product in the list  
-            if (products.get(i).getName().equals(name)) { // get(i) returns a product so I can use Products methods
+    private static Products getProduct(List<Products> inventory, String name) {
+        for (Products p : inventory) {       // loop each product in the list  
+            if (p.getName().equals(name)) { // get(i) returns a product so I can use Products methods
                                                           // getName() method for a Products object, equals() method to compare strings 
-                return products.get(i);                   // returns a product
+                return p;                   // returns a product
             }
         }
         return null;
@@ -131,7 +131,7 @@ public class Main {
 
         catch (FileNotFoundException e) {                       // error handling of Java
             System.out.println("File not found.");
-            return inventory;
+            return inventory;              // return empty list if file is not found         
         }
 
     }
@@ -139,8 +139,7 @@ public class Main {
     private static void saveProducts(List<Products> inventory) {
         try {
             FileWriter filewrite = new FileWriter("Test.txt");
-            for (int i = 0; i < inventory.size(); i++) {
-                Products product = inventory.get(i);                        // get product to write
+            for (Products product : inventory) {                    // get product to write
                 String name = product.getName();                            
                 double price = product.getPrice();
                 int quantity = product.getQuantity();
