@@ -15,8 +15,8 @@ public class SwingPrac {
         products.setLayout(new FlowLayout());  // wraps
         menu.setLayout(new BoxLayout(menu, BoxLayout.Y_AXIS)); // stacks vertically
 
-        menu.setBackground(Color.RED);
-        products.setBackground(Color.GREEN);
+        menu.setBackground(Color.BLUE);
+        products.setBackground(Color.YELLOW);
 
         // add button
         JButton b1 = new JButton("Add Product");
