@@ -62,6 +62,7 @@ public class Products {
 
     }
 
+
     private void setName(String name) {
         this.name = name;
     }

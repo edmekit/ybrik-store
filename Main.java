@@ -46,15 +46,15 @@ public class Main {
         System.out.println("  " + String.valueOf(ch).repeat(length));
     }
 
-    private static Products getProduct(List<Products> inventory, String name) {
-        for (Products p : inventory) {       // loop each product in the list  
-            if (p.getName().equals(name)) { // get(i) returns a product so I can use Products methods
-                                                          // getName() method for a Products object, equals() method to compare strings 
-                return p;                   // returns a product
-            }
+    public static Products getProduct(List<Products> inventory, String name) {
+    for (Products p : inventory) {       // loop each product in the list  
+        if (p.getName().equals(name)) { // get(i) returns a product so I can use Products methods
+                                                        // getName() method for a Products object, equals() method to compare strings 
+            return p;                   // returns a product
         }
-        return null;
     }
+    return null;
+}
 
     private static void deleteItem(Scanner scanner, List<Products> inventory) {
         System.out.print("\nEnter name of product to delete: ");
